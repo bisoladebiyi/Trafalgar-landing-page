@@ -5,23 +5,35 @@ body {
   font-family: Mulish, sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px 120px 20px;
+  padding: 50px 120px 20px;
+}
+.navbar button:last-child{
+    display: none;
+    width: 40px;
 }
 
 .nav-links {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-self: center;
   font-size: 16px;
 }
 .nav-links li:not(:last-child) {
   margin-right: 25px;
 }
+.nav-links li a {
+    color: #000000;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -52,7 +64,13 @@ body {
   color: #fff;
   margin-top: 45px;
 }
-.header div img {
+.header button:hover {
+    color: #458ff6;
+    background: #fff;
+    border: 1px solid #458ff6;
+    transition: all ease .2s;
+}
+.header img:last-child {
   width: 5%;
   position: absolute;
   top: 0;
@@ -60,6 +78,9 @@ body {
 }
 .header-img {
   width: 50%;
+}
+.services {
+    text-align: center;
 }
 .services .services-text {
   text-align: center;
@@ -94,12 +115,17 @@ hr {
   position: relative;
 }
 .services .services-cards div {
-  /* height: 250px; */
   border-radius: 20px;
   background: #fff;
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
   padding: 40px 33px;
   z-index: 3;
+  text-align: left;
+}
+.services .services-cards div:hover {
+    box-shadow: 10px 40px 40px rgba(213, 214, 219, 0.4);
+    transition: all ease .2s;
+
 }
 .services .services-cards div img {
   width: 70px;
@@ -128,7 +154,7 @@ hr {
   width: 100px;
 }
 .btn {
-  margin: 68px auto 0;
+  margin: 68px 0 0;
   border: 1.4px solid #458ff6;
   box-sizing: border-box;
   border-radius: 55px;
@@ -136,6 +162,7 @@ hr {
   width: 160px;
   padding: 10px;
   background: #fff;
+  
 }
 .providers {
   display: flex;
@@ -161,10 +188,16 @@ hr {
   line-height: 25px;
   color: #7d7987;
 }
-.btn-provider {
+.btn-2 {
   margin-top: 40px;
 }
+.btn:hover, .btn-2:hover {
+    color: #fff;
+    background: #458ff6;
+    transition: all ease .2s;
+}
 .download-app {
+    position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -182,8 +215,17 @@ hr {
   line-height: 25px;
   color: #7d7987;
 }
-.download-app img {
+.download-app img:nth-child(2) {
   width: 50%;
+}
+.download-app img:nth-child(3){
+    position: absolute;
+    width: 70px;
+    left: 94.62%;
+right: -2.85%;
+bottom: 120.63%;
+
+
 }
 .testimonials {
   margin: 200px auto 0;
@@ -200,24 +242,29 @@ hr {
 }
 .article {
   margin-top: 150px;
+  text-align: center;
 }
 .article p:first-child {
   font-weight: bold;
   font-size: 36px;
   line-height: 50px;
-  text-align: center;
 }
 .articles {
   display: grid;
   grid-template-columns: auto auto auto;
   width: 73%;
   margin: 70px auto 0;
+  text-align: left;
 }
 .articles div {
   width: 285px;
   height: 450px;
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
   border-radius: 20px;
+}
+.articles div:hover {
+    box-shadow: 10px 40px 40px rgba(213, 214, 219, 0.4);
+    transition: all ease .2s;
 }
 .articles div img {
   width: 100%;
@@ -254,7 +301,7 @@ hr {
   height: 400px;
   margin-top: 200px;
   color: white;
- 
+ position: relative;
 }
 .footer .footer-links {
     display: flex;
@@ -295,3 +342,647 @@ line-height: 30px;
     font-weight: 500;
 font-size: 15px;
 }
+.footer img:nth-child(3) {
+    position: absolute;
+    width: 110px;
+    top: -62px;
+    z-index: -2;
+    right: 60px;
+}
+.footer img:last-child {
+    position: absolute;
+    width: 90px;
+    bottom: 0;
+}
+
+
+
+
+#menu {
+    background: #fff;
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity ease .3s;
+}
+#menu ul li {
+    margin-bottom: 25px;
+    color: #000000;
+    font-weight: 400;
+}
+#menu ul li a {
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+/* Responsiveness */
+@media  (max-width: 1040px) and (min-width: 940px) {
+    .nav-links {
+        font-size: 15px;
+    }
+    .header p:first-child {
+        font-size: 40px;
+    }
+    .header p:nth-child(2) {
+        font-size: 16px;
+    }
+    .header button {
+        width: 120px;
+  height: 35px;
+    }
+    .header-img{
+        width: 47%;
+    }
+    .providers {
+        padding: 0 100px 0 120px;
+    }
+    .providers div p:first-child{
+        font-size: 30px;
+    }
+    .providers div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .btn, .btn-2 {
+        width: 120px;
+        height: 35px;
+    }
+    .download-app {
+        padding: 0 90px 0 140px;
+    }
+    .download-app div p:first-child {
+        font-size: 30px;
+    }
+    .download-app div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .download-app img:nth-child(3) {
+        width: 50px;
+    }
+    .articles {
+        width: 85%;
+    }
+    .articles div {
+        width: 260px;
+    }
+    .articles div p:nth-child(2) {
+        font-size: 15px;
+    }
+    .articles div p:nth-child(3) {
+        font-size: 13px;
+    }
+    .articles div a:nth-child(4) {
+        font-size: 14px;
+    }
+}
+@media  (max-width: 939px) and (min-width: 0px) {
+    .nav-links {
+        display: none;
+    }
+    .navbar button:last-child{
+        display: flex;
+        background: none;
+        outline: none;
+        border: none;
+    }
+    hr, .second-hr{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .providers {
+        padding: 0 100px 0 120px;
+        display: block;
+    }
+    .providers div {
+        text-align: center;
+    }
+    .providers img{
+        display: block;
+        margin: 0 auto 5px;
+    }
+    .download-app{
+        display: block;
+    } 
+    .download-app img:nth-child(2){
+        display: block;
+        margin: 0 auto 5px;
+        order: 1;
+    }
+    .download-app div {
+        text-align: center;
+    }
+   
+}
+@media  (max-width: 939px) and (min-width: 738px) {
+    .navbar {
+        padding: 50px 100px 20px;
+    }
+    .header {
+        padding: 0 80px;
+    }
+    .header p:first-child {
+        font-size: 38px;
+    }
+    .header p:nth-child(2) {
+        font-size: 14px;
+    }
+    .header button {
+        width: 120px;
+  height: 35px;
+    }
+    .header-img{
+        width: 50%;
+        height: 350px;
+    }
+    .services .services-text p:first-child{
+        font-size: 34px;
+        line-height: 20px;
+    }
+    .services .services-text p:last-child {
+        font-size: 14px;
+        margin-top: 24px;
+    }
+    .services .services-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .providers img{
+        width: 450px;
+    }
+  
+    .providers div p:first-child{
+        font-size: 30px;
+    }
+    .providers div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .btn, .btn-2 {
+        width: 120px;
+        height: 35px;
+    }
+    .download-app {
+        padding: 0 90px 0 140px;
+    }
+    .download-app div p:first-child {
+        font-size: 30px;
+    }
+    .download-app div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .download-app img:nth-child(2) {
+        width: 450px;
+    }
+    .download-app img:nth-child(3) {
+        width: 40px;
+    }
+    .testimonials {
+        width: 700px;
+    }
+    .articles {
+        width: 90%;
+    }
+    .articles div {
+        width: 210px;
+        height: 400px;
+    }
+    .articles div p:nth-child(2) {
+        font-size: 15px;
+        margin-left: 20px;
+       
+    }
+    .articles div p:nth-child(3) {
+        font-size: 11px;
+        margin-left: 20px;
+      
+    }
+    .articles div a:nth-child(4) {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .footer .footer-links {
+        width: 90%;
+    }
+    .footer .logo .logo-bg {
+        width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 23px;
+    }
+    .footer .logo span {
+        font-size: 18px;
+  margin-left: 8px;
+    }
+    .footer .footer-links p {
+        font-size: 13px;
+    }
+}
+@media (max-width:737px) and (min-width:0px){
+    .header {
+        display: block;
+    }
+    .header-img{
+        display: none;
+    }
+}
+@media (max-width:737px) and (min-width:537px) {
+    .navbar {
+        padding: 30px 30px 20px;
+    }
+    .header {
+        padding: 0 100px;
+    }
+    .header p:first-child {
+        font-size: 38px;
+    }
+    .header p:nth-child(2) {
+        font-size: 14px;
+    }
+    .header button {
+        width: 120px;
+        height: 35px;
+    }
+    .services .services-text p:first-child{
+        font-size: 34px;
+        line-height: 20px;
+    }
+    .services .services-text p:last-child {
+        width: 70%;
+        font-size: 14px;
+        margin: 24px auto 0;
+    }
+    .services .services-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .services .services-cards div{
+        padding: 40px 20px;
+    }
+    .services .services-cards img:nth-child(7) {
+        width: 90px;
+    }
+    .providers img{
+        width: 340px;
+    }
+  
+    .providers div p:first-child{
+        font-size: 30px;
+    }
+    .providers div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .btn, .btn-2 {
+        width: 120px;
+        height: 35px;
+    }
+    .download-app {
+        padding: 0 90px 0 140px;
+    }
+    .download-app div p:first-child {
+        font-size: 30px;
+    }
+    .download-app div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .download-app img:nth-child(2) {
+        width: 340px;
+    }
+    .download-app img:nth-child(3) {
+        width: 28px;
+    }
+    .testimonials {
+        width: 500px;
+    }
+    .article p:first-child {
+        font-size: 32px;
+        line-height: 35px;
+    }
+    .articles {
+        display: block;
+    }
+    .articles div {
+        margin: 0px auto 20px;
+        width: 300px;
+        height: 450px;
+    }
+    .articles div p:nth-child(2) {
+        font-size: 15px;
+        margin-left: 20px;
+       
+    }
+    .articles div p:nth-child(3) {
+        font-size: 13px;
+        margin-left: 20px;
+      
+    }
+    .articles div a:nth-child(4) {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .footer .footer-links {
+        width: 90%;
+    }
+    .footer .logo .logo-bg {
+        width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 23px;
+    }
+    .footer .logo span {
+        font-size: 16px;
+  margin-left: 8px;
+    }
+    .footer .footer-links p {
+        font-size: 11px;
+    }
+}
+@media (max-width:536px) and (min-width:0px) {
+    .footer .footer-links div:nth-child(4){
+        margin-bottom: 0;
+        padding-bottom: 5px;
+    }
+}
+
+
+@media (max-width:536px) and (min-width:336px) {
+    .navbar {
+        padding: 30px 7px 20px;
+    }
+    .header {
+        padding: 0 20px;
+    }
+    .header p:first-child {
+        font-size: 38px;
+    }
+    .header p:nth-child(2) {
+        font-size: 14px;
+    }
+    .header button {
+        width: 120px;
+        height: 35px;
+    }
+    .services .services-text p:first-child{
+        font-size: 34px;
+        line-height: 20px;
+    }
+    .services .services-text p:last-child {
+        width: 80%;
+        font-size: 14px;
+        margin: 24px auto 0;
+    }
+    .services .services-cards {
+        display: block;
+        
+    }
+    .services .services-cards div{
+        padding: 40px 20px;
+        margin: 0 auto 20px;
+    }
+    .services .services-cards img:nth-child(7) {
+        width: 90px;
+        left: 75%;
+        z-index: -5;
+    }
+    .providers {
+        padding: 0 20px;
+    }
+    .providers img{
+        width: 300px;
+    }
+  
+    .providers div p:first-child{
+        font-size: 30px;
+    }
+    .providers div p:nth-child(3) {
+        font-size: 13px;
+    }
+    .btn, .btn-2 {
+        width: 120px;
+        height: 35px;
+    }
+    .download-app {
+        padding: 0 20px;
+    }
+    .download-app div p:first-child {
+        font-size: 30px;
+    }
+    .download-app div p:nth-child(3) {
+        font-size: 14px;
+    }
+    .download-app img:nth-child(2) {
+        width: 300px;
+    }
+    .download-app img:nth-child(3) {
+        display: none;
+    }
+    .testimonials {
+        width: 300px;
+        height: 200px;
+    }
+    .article p:first-child {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .articles {
+        display: block;
+    }
+    .articles div {
+        margin: 0px auto 20px;
+        width: 270px;
+        height: 450px;
+    }
+    .articles div p:nth-child(2) {
+        font-size: 15px;
+        margin-left: 20px;
+       
+    }
+    .articles div p:nth-child(3) {
+        font-size: 13px;
+        margin-left: 20px;
+      
+    }
+    .articles div a:nth-child(4) {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+    .footer {
+        height: auto;
+    }
+    .footer .footer-links {
+        display: block;
+        width: 90%;
+    }
+    .footer .logo .logo-bg {
+        width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 23px;
+    }
+    .footer .logo span {
+        font-size: 16px;
+  margin-left: 8px;
+    }
+    .footer .footer-links div{
+        margin-bottom: 20px;
+    }
+    .footer .footer-links div:nth-child(2) {
+        float: right;
+        order: 2;
+    }
+    .footer .footer-links p {
+        font-size: 11px;
+    }
+    .footer img:last-child{
+        display: none;
+    }
+
+}
+@media (max-width:336px) and (min-width:200px) {
+    .navbar {
+        padding: 30px 7px 20px;
+    }
+    .navbar img:last-child {
+        width: 30px;
+    }
+    .header {
+        padding: 0 20px;
+    }
+    .header p:first-child {
+        font-size: 38px;
+    }
+    .header p:nth-child(2) {
+        font-size: 14px;
+    }
+    .header button {
+        width: 120px;
+        height: 35px;
+    }
+    .services .services-text p:first-child{
+        font-size: 34px;
+        line-height: 20px;
+    }
+    .services .services-text p:last-child {
+        width: 85%;
+        font-size: 13px;
+        margin: 24px auto 0;
+    }
+    .services .services-cards {
+        display: block;
+        
+    }
+    .services .services-cards div{
+        padding: 40px 20px;
+        margin: 0 auto 20px;
+    }
+    .services .services-cards img:nth-child(7) {
+        width: 70px;
+        left: 75%;
+        z-index: -5;
+    }
+    .providers {
+        padding: 0 20px;
+    }
+    .providers img{
+        width: 230px;
+    }
+  
+    .providers div p:first-child{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .providers div p:nth-child(3) {
+        width: 70%;
+        font-size: 13px;
+        margin: 0 auto;
+    }
+    .btn, .btn-2 {
+        width: 120px;
+        height: 35px;
+    }
+    .download-app {
+        padding: 0 20px;
+    }
+    .download-app div p:first-child {
+         font-size: 28px;
+        line-height: 40px;
+    }
+    .download-app div p:nth-child(3) {
+        width: 70%;
+        font-size: 13px;
+        margin: 0 auto;
+    }
+    .download-app img:nth-child(2) {
+        width: 230px;
+    }
+    .download-app img:nth-child(3) {
+        display: none;
+    }
+    .testimonials {
+        width: 250px;
+        height: 200px;
+    }
+    .article p:first-child {
+        font-size: 26px;
+        line-height: 35px;
+    }
+    .articles {
+        display: block;
+    }
+    .articles div {
+        margin: 0px auto 20px;
+        width: 200px;
+        height: 400px;
+    }
+    .articles div p:nth-child(2) {
+        font-size: 14px;
+        margin-left: 10px;
+       
+    }
+    .articles div p:nth-child(3) {
+        font-size: 11px;
+        margin-left: 10px;
+      
+    }
+    .articles div a:nth-child(4) {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .footer {
+        height: auto;
+    }
+    .footer .footer-links {
+        display: block;
+        width: 90%;
+    }
+    .footer .logo .logo-bg {
+        width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 23px;
+    }
+    .footer .logo span {
+        font-size: 16px;
+  margin-left: 8px;
+    }
+    .footer .footer-links div{
+        margin-bottom: 20px;
+    }
+    .footer .footer-links div:nth-child(2) {
+        float: right;
+        order: 2;
+    }
+    .footer .footer-links p {
+        font-size: 11px;
+    }
+    .footer img:last-child{
+        display: none;
+    }
+
+}
+

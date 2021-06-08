@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="navbar" id="home">
         <img src="images/logo.svg" alt="logo" />
         <ul class="nav-links">
-            <li>Home</li>
-            <li>Find a doctor</li>
-            <li>Apps</li>
-            <li>Testimonials</li>
-            <li>About us</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#doctor">Find a doctor</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#about-us">About us</a></li>
         </ul>
+        <button onclick=showMenu()><img src="images/menu.svg" alt=""></button>
+       
     </div>
     <div class="header">
         <div>
@@ -28,12 +30,13 @@
                 accessible on mobile and online <br />for everyone
             </p>
             <button>Consult today</button>
-            <img src="images/element.png" alt="" />
+            
         </div>
         <img class="header-img" src="images/trafalgar-header illustration 1.png" alt="" />
+        <img src="images/element.png" alt="" />
     </div>
     <div class="services">
-        <div class="services-text">
+        <div class="services-text" id="doctor">
             <p>Our services</p>
             <hr />
             <p>
@@ -104,10 +107,11 @@
                 just work. We take pride<br />
                 in the solutions we deliver
             </p>
-            <button class="btn btn-provider">Learn more</button>
+            <button class="btn btn-2">Learn more</button>
         </div>
+       
     </div>
-    <div class="download-app">
+    <div class="download-app" id="apps">
         <div>
             <p>
                 Download our<br />
@@ -120,17 +124,18 @@
                 tedeous form, long calls,<br />
                 or administrative hassle) and securely
             </p>
-            <button class="btn">Download</button>
+            <button class="btn btn-2">Download</button>
         </div>
         <img src="images/download.png" alt="" />
+        <img src="images/element (2).svg" alt="">
     </div>
-    <div class="testimonials">
+    <div class="testimonials" id="testimonials">
         <div class="testimonial"></div>
         <!-- <div class="testimonial"></div>
       <div class="testimonial"></div>
       <div class="testimonial"></div>  -->
     </div>
-    <div class="article">
+    <div class="article" id="about-us">
         <p>Check out our latest article</p>
         <hr />
         <div class="articles">
@@ -183,6 +188,7 @@
         <button class="btn">View all</button>
     </div>
     <div class="footer"><br>
+        
         <div class="footer-links">
             <div>
                 <div class="logo">
@@ -212,9 +218,32 @@
                     How it works</p>
             </div>
         </div>
-
-
+        <img src="images/element (3).svg" alt="">
+        <img src="images/element (4).svg" alt="">
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#doctor">Find a doctor</a></li>
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#about-us">About us</a></li>
+        </ul>
     </div>
 </body>
+<script type="text/javascript">
+ 
+
+const showMenu = () => {
+    let menu = document.getElementById("menu")
+
+    if(menu.style.opacity == 0) {
+        menu.setAttribute("style", "opacity: 1;")
+    }
+    else menu.setAttribute("style", "opacity: 0;")
+}
+
+   
+</script>
 
 </html>
