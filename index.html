@@ -1,249 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styles.css" />
     <title>Trafalgar</title>
-</head>
+  </head>
 
-<body>
-    <div class="navbar" id="home">
-        <img src="images/logo.svg" alt="logo" />
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#doctor">Find a doctor</a></li>
-            <li><a href="#apps">Apps</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#about-us">About us</a></li>
-        </ul>
-        <button onclick=showMenu()><img src="images/menu.svg" alt=""></button>
-       
-    </div>
-    <div class="header">
-        <div>
-            <p>Virtual healthcare <br />for you</p>
-            <p>
-                Trafalgar provides progressive, and affordable <br />healthcare,
-                accessible on mobile and online <br />for everyone
-            </p>
-            <button>Consult today</button>
-            
-        </div>
-        <img class="header-img" src="images/trafalgar-header illustration 1.png" alt="" />
-        <img src="images/element.png" alt="" />
-    </div>
-    <div class="services">
-        <div class="services-text" id="doctor">
-            <p>Our services</p>
-            <hr />
-            <p>
-                We provide to you the best choiches for you. Adjust it to your health
-                needs and make sure your undergo treatment <br />with our highly
-                qualified doctors you can consult with us which type of service is
-                suitable for your health
-            </p>
-        </div>
-        <div class="services-cards">
-            <div>
-                <img src="images/search.svg" alt="" />
-                <p>Search Doctor</p>
-                <p>
-                    Choose your doctor from thousands of specialist, general, and
-                    trusted hospitals
-                </p>
-            </div>
-            <div>
-                <img src="images/pharmacy.svg" alt="" />
-                <p>Online pharmacy</p>
-                <p>
-                    Buy your medicines with our mobile application with a simple
-                    delivery system
-                </p>
-            </div>
-            <div>
-                <img src="images/consultation.svg" alt="" />
-                <p>Consultation</p>
-                <p>
-                    Free consultation with our trusted doctors and get the best
-                    recomendations
-                </p>
-            </div>
-            <div>
-                <img src="images/details.svg" alt="" />
-                <p>Details info</p>
-                <p>
-                    Free consultation with our trusted doctors and get the best
-                    recomendations
-                </p>
-            </div>
-            <div>
-                <img src="images/emergency.svg" alt="" />
-                <p>Emergency care</p>
-                <p>
-                    You can get 24/7 urgent care for yourself or your children and your
-                    lovely family
-                </p>
-            </div>
-            <div>
-                <img src="images/tracking.svg" alt="" />
-                <p>Tracking</p>
-                <p>Track and save your medical history and health data</p>
-            </div>
-            <img src="images/element.svg" alt="" class="background" />
-        </div>
-        <button class="btn">Learn more</button>
-    </div>
-    <div class="providers">
-        <img src="images/trafalgar-illustration 2.png" alt="" />
-        <div>
-            <p>Leading healthcare<br />providers</p>
-            <hr class="second-hr" />
-            <p>
-                Trafalgar provides progressive, and affordable<br />healthcare,
-                accessible on mobile and online for<br />everyone. To us, it’s not
-                just work. We take pride<br />
-                in the solutions we deliver
-            </p>
-            <button class="btn btn-2">Learn more</button>
-        </div>
-       
-    </div>
-    <div class="download-app" id="apps">
-        <div>
-            <p>
-                Download our<br />
-                mobile apps
-            </p>
-            <hr class="second-hr" />
-            <p>
-                Our dedicated patient engagement app and<br />
-                web portal allow you to access information<br />instantaneously (no
-                tedeous form, long calls,<br />
-                or administrative hassle) and securely
-            </p>
-            <button class="btn btn-2">Download</button>
-        </div>
-        <img src="images/download.png" alt="" />
-        <img src="images/element (2).svg" alt="">
-    </div>
-    <div class="testimonials" id="testimonials">
-        <div class="testimonial"></div>
-        <!-- <div class="testimonial"></div>
-      <div class="testimonial"></div>
-      <div class="testimonial"></div>  -->
-    </div>
-    <div class="article" id="about-us">
-        <p>Check out our latest article</p>
+  <body>
+    <nav class="navbar" id="home">
+      <img src="images/logo.svg" alt="logo" />
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#doctor">Find a doctor</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about-us">About us</a></li>
+      </ul>
+      <button onclick="showMenu()"><img src="images/menu.svg" alt="" /></button>
+    </nav>
+    <header class="header">
+      <div>
+        <p>Virtual healthcare <br />for you</p>
+        <p>
+          Trafalgar provides progressive, and affordable <br />healthcare,
+          accessible on mobile and online <br />for everyone
+        </p>
+        <button>Consult today</button>
+      </div>
+      <img
+        class="header-img"
+        src="images/trafalgar-header illustration 1.png"
+        alt=""
+      />
+      <img src="images/element.png" alt="" />
+    </header>
+    <section class="services">
+      <div class="services-text" id="doctor">
+        <p>Our services</p>
         <hr />
-        <div class="articles">
-            <div>
-                <img src="images/disease.png" alt="" />
-
-                <p>Disease detection, check<br>up in the laboratory</p>
-                <p>
-                    In this case, the role of the health<br>laboratory is very important to
-                    do<br>a disease detection...
-                </p>
-                <a href="#">Read More &nbsp;<svg width="15" height="9" viewBox="0 0 15 9" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.803536 5.30357L11.4107 5.30357L9.08032 7.63393C8.75889 7.95536 8.75889 8.4375 9.08032 8.75893C9.40175 9.08036 9.88389 9.08036 10.2053 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2053 0.241071C9.88389 -0.0803579 9.40175 -0.080358 9.08032 0.241071C8.75889 0.5625 8.75889 1.04464 9.08032 1.36607L11.4107 3.69643L0.803536 3.69643C0.40175 3.69643 -3.58041e-05 4.01786 -3.58462e-05 4.5C-3.58884e-05 4.98214 0.40175 5.30357 0.803536 5.30357Z"
-                            fill="#4089ED" />
-                    </svg> </a>
-
-
-            </div>
-            <div>
-                <img src="images/herbal.png" alt="" />
-                <p>Herbal medicines that are<br>safe for consumption</p>
-                <p>
-                    Herbal medicine is very widely used<br>at this time because of its very
-                    good<br>for your health...
-                </p>
-                <a href="#">Read More &nbsp;<svg width="15" height="9" viewBox="0 0 15 9" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.803536 5.30357L11.4107 5.30357L9.08032 7.63393C8.75889 7.95536 8.75889 8.4375 9.08032 8.75893C9.40175 9.08036 9.88389 9.08036 10.2053 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2053 0.241071C9.88389 -0.0803579 9.40175 -0.080358 9.08032 0.241071C8.75889 0.5625 8.75889 1.04464 9.08032 1.36607L11.4107 3.69643L0.803536 3.69643C0.40175 3.69643 -3.58041e-05 4.01786 -3.58462e-05 4.5C-3.58884e-05 4.98214 0.40175 5.30357 0.803536 5.30357Z"
-                            fill="#4089ED" />
-                    </svg> </a>
-            </div>
-            <div>
-                <img src="images/skin.png" alt="" />
-                <p>Natural care for healthy<br>facial skin</p>
-                <p>
-                    A healthy lifestyle should start from<br>now and also for your skin
-                    health.<br>There are some...
-                </p>
-                <a href="#">Read More &nbsp;<svg width="15" height="9" viewBox="0 0 15 9" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.803536 5.30357L11.4107 5.30357L9.08032 7.63393C8.75889 7.95536 8.75889 8.4375 9.08032 8.75893C9.40175 9.08036 9.88389 9.08036 10.2053 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2053 0.241071C9.88389 -0.0803579 9.40175 -0.080358 9.08032 0.241071C8.75889 0.5625 8.75889 1.04464 9.08032 1.36607L11.4107 3.69643L0.803536 3.69643C0.40175 3.69643 -3.58041e-05 4.01786 -3.58462e-05 4.5C-3.58884e-05 4.98214 0.40175 5.30357 0.803536 5.30357Z"
-                            fill="#4089ED" />
-                    </svg> </a>
-            </div>
+        <p>
+          We provide to you the best choiches for you. Adjust it to your health
+          needs and make sure your undergo treatment <br />with our highly
+          qualified doctors you can consult with us which type of service is
+          suitable for your health
+        </p>
+      </div>
+      <div class="services-cards">
+        <div>
+          <img src="images/search.svg" alt="" />
+          <p>Search Doctor</p>
+          <p>
+            Choose your doctor from thousands of specialist, general, and
+            trusted hospitals
+          </p>
         </div>
-        <button class="btn">View all</button>
-    </div>
-    <div class="footer"><br>
-        
-        <div class="footer-links">
+        <div>
+          <img src="images/pharmacy.svg" alt="" />
+          <p>Online pharmacy</p>
+          <p>
+            Buy your medicines with our mobile application with a simple
+            delivery system
+          </p>
+        </div>
+        <div>
+          <img src="images/consultation.svg" alt="" />
+          <p>Consultation</p>
+          <p>
+            Free consultation with our trusted doctors and get the best
+            recomendations
+          </p>
+        </div>
+        <div>
+          <img src="images/details.svg" alt="" />
+          <p>Details info</p>
+          <p>
+            Free consultation with our trusted doctors and get the best
+            recomendations
+          </p>
+        </div>
+        <div>
+          <img src="images/emergency.svg" alt="" />
+          <p>Emergency care</p>
+          <p>
+            You can get 24/7 urgent care for yourself or your children and your
+            lovely family
+          </p>
+        </div>
+        <div>
+          <img src="images/tracking.svg" alt="" />
+          <p>Tracking</p>
+          <p>Track and save your medical history and health data</p>
+        </div>
+        <img src="images/element.svg" alt="" class="background" />
+      </div>
+      <button class="btn">Learn more</button>
+    </section>
+    <section class="providers">
+      <img src="images/trafalgar-illustration 2.png" alt="" />
+      <div>
+        <p>Leading healthcare<br />providers</p>
+        <hr class="second-hr" />
+        <p>
+          Trafalgar provides progressive, and affordable<br />healthcare,
+          accessible on mobile and online for<br />everyone. To us, it’s not
+          just work. We take pride<br />
+          in the solutions we deliver
+        </p>
+        <button class="btn btn-2">Learn more</button>
+      </div>
+    </section>
+    <section class="download-app" id="apps">
+      <div>
+        <p>
+          Download our<br />
+          mobile apps
+        </p>
+        <hr class="second-hr" />
+        <p>
+          Our dedicated patient engagement app and<br />
+          web portal allow you to access information<br />instantaneously (no
+          tedeous form, long calls,<br />
+          or administrative hassle) and securely
+        </p>
+        <button class="btn btn-2">Download</button>
+      </div>
+      <img src="images/download.png" alt="" />
+      <img src="images/element (2).svg" alt="" />
+    </section>
+    <section class="testimonial-section">
+      <div class="testimonials" id="testimonials">
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <p class="testimonial-heading">What our customer are saying</p> <hr>
             <div>
-                <div class="logo">
-                    <div class="logo-bg">T</div>
-                    <span>Trafalgar</span>
+              <div class="individual">
+                <img src="images/image 1.png" alt="" class="testimonial-img">
+                <div class="individual-details">
+                  <p>Edward Newgate</p>
+                  <p>Founder Circle</p>
                 </div>
-                <p>Trafalgar provides progressive, and affordable<br> healthcare, accessible on mobile and online<br>
-                    for everyone</p>
-                <p>©Trafalgar PTY LTD 2020. All rights reserved</p>
+              </div>
+              <p class="testimonial-details">“Our dedicated patient engagement app and 
+                web portal allow you to access information instantaneously (no tedeous form, long calls, 
+                or administrative hassle) and securely”</p>
             </div>
-            <div>
-                <p>Company</p>
-                <p>About<br>Testimonials<br>Find a doctor<br>Apps</p>
-            </div>
-            <div>
-                <p>Region</p>
-                <p>Indonesia<br>
-                    Singapore<br>
-                    Hongkong<br>
-                    Canada</p>
-            </div>
-            <div>
-                <p>Help</p>
-                <p>Help center<br>
-                    Contact support<br>
-                    Instructions<br>
-                    How it works</p>
-            </div>
+            <img src="images/Group.svg" alt="" class="element-one"> 
+          </div>
         </div>
-        <img src="images/element (3).svg" alt="">
-        <img src="images/element (4).svg" alt="">
-    </div>
-    <div id="menu">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#doctor">Find a doctor</a></li>
-            <li><a href="#apps">Apps</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#about-us">About us</a></li>
-        </ul>
-    </div>
-</body>
-<script type="text/javascript">
- 
+        
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <p class="testimonial-heading">What our customer are saying</p> <hr>
+            <div>
+              <div class="individual">
+                <img src="images/image 1.png" alt="" class="testimonial-img">
+                <div class="individual-details">
+                  <p>Abisola Adebiyi</p>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+              <p class="testimonial-details">“Our dedicated patient engagement app and 
+                web portal allow you to access information instantaneously (no tedeous form, long calls, 
+                or administrative hassle) and securely”</p>
+            </div>
+            <img src="images/Group.svg" alt="" class="element-one"> 
+          </div>
+        </div>
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <p class="testimonial-heading">What our customer are saying</p> <hr>
+            <div>
+              <div class="individual">
+                <img src="images/image 1.png" alt="" class="testimonial-img">
+                <div class="individual-details">
+                  <p>Oreoluwa Adebiyi</p>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+              <p class="testimonial-details">“Our dedicated patient engagement app and 
+                web portal allow you to access information instantaneously (no tedeous form, long calls, 
+                or administrative hassle) and securely”</p>
+            </div>
+            <img src="images/Group.svg" alt="" class="element-one"> 
+          </div>
+        </div>
+        <div class="testimonial-container">
+          <div class="testimonial">
+            <p class="testimonial-heading">What our customer are saying</p> <hr>
+            <div>
+              <div class="individual">
+                <img src="images/image 1.png" alt="" class="testimonial-img">
+                <div class="individual-details">
+                  <p>Tomisin Adebiyi</p>
+                  <p>Frontend Developer</p>
+                </div>
+              </div>
+              <p class="testimonial-details">“Our dedicated patient engagement app and 
+                web portal allow you to access information instantaneously (no tedeous form, long calls, 
+                or administrative hassle) and securely”</p>
+            </div>
+            <img src="images/Group.svg" alt="" class="element-one"> 
+          </div>
 
-const showMenu = () => {
-    let menu = document.getElementById("menu")
-
-    if(menu.style.opacity == 0) {
-        menu.setAttribute("style", "opacity: 1;")
-    }
-    else menu.setAttribute("style", "opacity: 0;")
-}
-
+        </div>
+        
    
-</script>
+      </div>
+      <div class="controls">
+        <svg
+          width="22"
+          height="12"
+          viewBox="0 0 29 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="prev-slide"
+        >
+          <path
+            d="M26.6911 7.76265L5.64523 7.76265L10.269 3.13893C10.9067 2.50117 10.9067 1.54454 10.269 0.906783C9.6312 0.269028 8.67457 0.269028 8.03681 0.906783L0.702627 8.24097C0.0648714 8.87872 0.0648714 9.83536 0.702627 10.4731L8.03681 17.8073C8.67457 18.445 9.6312 18.445 10.269 17.8073C10.9067 17.1695 10.9067 16.2129 10.269 15.5752L5.64523 10.9514L26.6911 10.9514C27.4883 10.9514 28.2855 10.3137 28.2855 9.35704C28.2855 8.40041 27.4883 7.76265 26.6911 7.76265Z"
+            fill="#458FF6"
+          />
+        </svg>
+        <svg
+          width="7"
+          height="7"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="radio-buttons active"
+          
+        >
+          <circle cx="5" cy="5" r="5" fill="#5B9BF3" />
+        </svg>
+        <svg
+          width="7"
+          height="7"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="radio-buttons"
+        >
+          <circle cx="5" cy="5" r="5" fill="#5B9BF3" />
+        </svg>
+        <svg
+          width="7"
+          height="7"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="radio-buttons"
+        >
+          <circle cx="5" cy="5" r="5" fill="#5B9BF3" />
+        </svg>
+        <svg
+          width="7"
+          height="7"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="radio-buttons"
+        >
+          <circle cx="5" cy="5" r="5" fill="#5B9BF3" />
+        </svg>
+        <svg
+          width="22"
+          height="12"
+          viewBox="0 0 29 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="next-slide"
+        >
+          <path
+            d="M1.73745 11.2373L22.7834 11.2373L18.1596 15.8611C17.5219 16.4988 17.5219 17.4555 18.1596 18.0932C18.7974 18.731 19.754 18.731 20.3918 18.0932L27.726 10.759C28.3637 10.1213 28.3637 9.16464 27.726 8.52689L20.3918 1.1927C19.754 0.55495 18.7974 0.55495 18.1596 1.1927C17.5219 1.83046 17.5219 2.78709 18.1596 3.42485L22.7834 8.04857L1.73745 8.04857C0.940251 8.04857 0.143058 8.68633 0.143058 9.64296C0.143058 10.5996 0.940251 11.2373 1.73745 11.2373Z"
+            fill="#458FF6"
+          />
+        </svg>
+      </div>
+    </section>
+    <section class="article" id="about-us">
+      <p>Check out our latest article</p>
+      <hr />
+      <div class="articles">
+        <div>
+          <img src="images/disease.png" alt="" />
 
+          <p>Disease detection, check<br />up in the laboratory</p>
+          <p>
+            In this case, the role of the health<br />laboratory is very
+            important to do<br />a disease detection...
+          </p>
+          <a href="#"
+            >Read More &nbsp;<svg
+              width="15"
+              height="9"
+              viewBox="0 0 15 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.803536 5.30357L11.4107 5.30357L9.08032 7.63393C8.75889 7.95536 8.75889 8.4375 9.08032 8.75893C9.40175 9.08036 9.88389 9.08036 10.2053 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2053 0.241071C9.88389 -0.0803579 9.40175 -0.080358 9.08032 0.241071C8.75889 0.5625 8.75889 1.04464 9.08032 1.36607L11.4107 3.69643L0.803536 3.69643C0.40175 3.69643 -3.58041e-05 4.01786 -3.58462e-05 4.5C-3.58884e-05 4.98214 0.40175 5.30357 0.803536 5.30357Z"
+                fill="#4089ED"
+              />
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="images/herbal.png" alt="" />
+          <p>Herbal medicines that are<br />safe for consumption</p>
+          <p>
+            Herbal medicine is very widely used<br />at this time because of its
+            very good<br />for your health...
+          </p>
+          <a href="#"
+            >Read More &nbsp;<svg
+              width="15"
+              height="9"
+              viewBox="0 0 15 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.803536 5.30357L11.4107 5.30357L9.08032 7.63393C8.75889 7.95536 8.75889 8.4375 9.08032 8.75893C9.40175 9.08036 9.88389 9.08036 10.2053 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2053 0.241071C9.88389 -0.0803579 9.40175 -0.080358 9.08032 0.241071C8.75889 0.5625 8.75889 1.04464 9.08032 1.36607L11.4107 3.69643L0.803536 3.69643C0.40175 3.69643 -3.58041e-05 4.01786 -3.58462e-05 4.5C-3.58884e-05 4.98214 0.40175 5.30357 0.803536 5.30357Z"
+                fill="#4089ED"
+              />
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="images/skin.png" alt="" />
+          <p>Natural care for healthy<br />facial skin</p>
+          <p>
+            A healthy lifestyle should start from<br />now and also for your
+            skin health.<br />There are some...
+          </p>
+          <a href="#"
+            >Read More &nbsp;<svg
+              width="15"
+              height="9"
+              viewBox="0 0 15 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.803536 5.30357L11.4107 5.30357L9.08032 7.63393C8.75889 7.95536 8.75889 8.4375 9.08032 8.75893C9.40175 9.08036 9.88389 9.08036 10.2053 8.75893L13.9018 5.0625C14.2232 4.74107 14.2232 4.25893 13.9018 3.9375L10.2053 0.241071C9.88389 -0.0803579 9.40175 -0.080358 9.08032 0.241071C8.75889 0.5625 8.75889 1.04464 9.08032 1.36607L11.4107 3.69643L0.803536 3.69643C0.40175 3.69643 -3.58041e-05 4.01786 -3.58462e-05 4.5C-3.58884e-05 4.98214 0.40175 5.30357 0.803536 5.30357Z"
+                fill="#4089ED"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <button class="btn">View all</button>
+    </section>
+    <footer class="footer">
+      <br />
+
+      <div class="footer-links">
+        <div>
+          <div class="logo">
+            <div class="logo-bg">T</div>
+            <span>Trafalgar</span>
+          </div>
+          <p>
+            Trafalgar provides progressive, and affordable<br />
+            healthcare, accessible on mobile and online<br />
+            for everyone
+          </p>
+          <p>©Trafalgar PTY LTD 2020. All rights reserved</p>
+        </div>
+        <div>
+          <p>Company</p>
+          <p>About<br />Testimonials<br />Find a doctor<br />Apps</p>
+        </div>
+        <div>
+          <p>Region</p>
+          <p>
+            Indonesia<br />
+            Singapore<br />
+            Hongkong<br />
+            Canada
+          </p>
+        </div>
+        <div>
+          <p>Help</p>
+          <p>
+            Help center<br />
+            Contact support<br />
+            Instructions<br />
+            How it works
+          </p>
+        </div>
+      </div>
+      <img src="images/element (3).svg" alt="" />
+      <img src="images/element (4).svg" alt="" />
+    </footer>
+    <div id="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#doctor">Find a doctor</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about-us">About us</a></li>
+      </ul>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js">
+  </script>
 </html>
