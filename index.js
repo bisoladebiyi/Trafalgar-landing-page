@@ -37,13 +37,13 @@ const moveSlide = (nextSlide) => {
   currentSlide = nextSlide;
 };
 
-// const showMenu = () => {
-//   let menu = document.getElementById("menu");
+const showMenu = () => {
+  let menu = document.getElementById("menu");
 
-//   if (menu.style.opacity == 0) {
-//     menu.setAttribute("style", "opacity: 1;");
-//   } else menu.setAttribute("style", "opacity: 0;");
-// };
+  if (menu.style.opacity == 0) {
+    menu.setAttribute("style", "opacity: 1;");
+  } else menu.setAttribute("style", "opacity: 0;");
+};
 
 // let slides = [...document.querySelectorAll(".testimonial")];
 // let currentSlide = 0;

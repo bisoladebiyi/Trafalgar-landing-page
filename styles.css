@@ -160,7 +160,7 @@ hr {
   border-radius: 55px;
   color: #458ff6;
   width: 160px;
-  padding: 10px;
+  padding: 10px 0;
   background: #fff;
 }
 .providers {
@@ -276,6 +276,7 @@ font-weight: bold;
 text-align: center;
 color: #FFFFFF;
 margin-top: 50px;
+z-index: 10000;
 }
 .testimonial-img {
     border-radius: 50%;
@@ -308,6 +309,7 @@ line-height: 30px;
 }
 .testimonial hr {
     border-color: #fff;
+    
 }
 .element-one {
     position: absolute;
@@ -331,11 +333,6 @@ line-height: 30px;
 .radio-buttons.active {
     opacity: 1;
 }
-
-
-
-
-
 
 
 
@@ -476,6 +473,30 @@ line-height: 30px;
   color: #000000;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsiveness */
 @media (max-width: 1040px) and (min-width: 940px) {
   .nav-links {
@@ -563,12 +584,12 @@ line-height: 30px;
     margin: 0 auto 5px;
   }
   .download-app {
-    display: block;
+    flex-direction: column;
+    flex-flow: column-reverse;
   }
   .download-app img:nth-child(2) {
-    display: block;
     margin: 0 auto 5px;
-    order: 1;
+   
   }
   .download-app div {
     text-align: center;
@@ -610,6 +631,7 @@ line-height: 30px;
     width: 450px;
   }
 
+
   .providers div p:first-child {
     font-size: 30px;
   }
@@ -636,8 +658,21 @@ line-height: 30px;
   .download-app img:nth-child(3) {
     width: 40px;
   }
-  .testimonials {
+  .testimonial {
     width: 700px;
+  }
+  .testimonial div:nth-child(3) {
+      width: 650px;
+      font-size: 14px;
+  }
+  .testimonial-img {
+      width: 90px;
+  }
+  .testimonial div:nth-child(3) .individual {
+      width: 250px;
+  }
+  .testimonial-details {
+      width: 300px;
   }
   .articles {
     width: 90%;
@@ -682,6 +717,15 @@ line-height: 30px;
   .header-img {
     display: none;
   }
+  .testimonial div:nth-child(3) {
+      margin-top: 10px;
+    flex-direction: column;
+    flex-flow: column-reverse;
+}
+.testimonial-details {
+    margin: 0 auto;
+    text-align: center;
+}
 }
 @media (max-width: 737px) and (min-width: 537px) {
   .navbar {
@@ -748,8 +792,26 @@ line-height: 30px;
   .download-app img:nth-child(3) {
     width: 28px;
   }
-  .testimonials {
+  .testimonial {
     width: 500px;
+  }
+  .testimonial div:nth-child(3) {
+      width: 480px;
+      font-size: 12px;
+  }
+  .testimonial-img {
+      width: 70px;
+  }
+  .testimonial div:nth-child(3) .individual {
+      margin-top: 10px;
+      width: 210px;
+      
+  }
+  .testimonial-details {
+      width: 400px;
+  }
+  .individual-details p:first-child {
+      font-size: 13px;
   }
   .article p:first-child {
     font-size: 32px;
@@ -796,6 +858,9 @@ line-height: 30px;
   .footer .footer-links div:nth-child(4) {
     margin-bottom: 0;
     padding-bottom: 5px;
+  }
+  .testimonial hr {
+      margin: 10px auto;
   }
 }
 
@@ -870,10 +935,34 @@ line-height: 30px;
   .download-app img:nth-child(3) {
     display: none;
   }
-  .testimonials {
+  .testimonial {
     width: 300px;
-    height: 200px;
   }
+  .testimonial-heading {
+      font-size: 21px;
+      padding: 5px;
+      margin-top: 20px;
+      line-height: 30px;
+  }
+  .testimonial div:nth-child(3) {
+    width: 290px;
+    font-size: 12px;
+    margin-top: 0;
+}
+.testimonial-img {
+    width: 60px;
+}
+.testimonial div:nth-child(3) .individual {
+    margin-top: 10px;
+   width: 190px;
+    
+}
+.testimonial-details {
+    width: 270px;
+}
+.individual-details p:first-child {
+    font-size: 13px;
+}
   .article p:first-child {
     font-size: 28px;
     line-height: 35px;
@@ -1009,10 +1098,35 @@ line-height: 30px;
   .download-app img:nth-child(3) {
     display: none;
   }
-  .testimonials {
+  .testimonial {
     width: 250px;
-    height: 200px;
   }
+  .testimonial-heading {
+    font-size: 21px;
+    padding: 5px;
+    margin-top: 20px;
+    line-height: 30px;
+}
+.testimonial div:nth-child(3) {
+  width: 230px;
+  font-size: 12px;
+  margin-top: 0;
+}
+.testimonial-img {
+  width: 50px;
+}
+.testimonial div:nth-child(3) .individual {
+  margin-top: 10px;
+ width: 170px;
+  
+}
+.testimonial-details {
+  width: 230px;
+}
+.individual-details p:first-child {
+  font-size: 12px;
+}
+
   .article p:first-child {
     font-size: 26px;
     line-height: 35px;
