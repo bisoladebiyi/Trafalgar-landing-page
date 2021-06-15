@@ -24,6 +24,9 @@ body {
   background: none;
   cursor: pointer;
 }
+.close img {
+    width: 100%;
+}
 .show {
     display: flex !important;
 }
@@ -997,7 +1000,7 @@ line-height: 30px;
     width: auto;
   }
   .articles div {
-    margin: 0px 20px 20px;
+    margin: 0px auto 20px;
     width: 334px;
     height: 480px;
   }
