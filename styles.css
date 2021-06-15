@@ -14,10 +14,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 50px 120px 20px;
+  align-items: center;
 }
-.navbar button:last-child {
+.hamburger, .close {
   display: none;
   width: 40px;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.show {
+    display: flex !important;
+}
+.hide{
+    display: none !important;
 }
 
 .nav-links {
@@ -85,7 +96,7 @@ body {
 }
 .services .services-text {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 70px;
 }
 .services .services-text p:first-child {
   font-weight: bold;
@@ -169,7 +180,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   padding: 0 160px 0 120px;
-  margin-top: 200px;
+  margin-top: 120px;
 }
 .providers img {
   width: 50%;
@@ -204,7 +215,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   padding: 0 120px 0 160px;
-  margin-top: 200px;
+  margin-top: 120px;
 }
 .download-app div p:first-child {
   font-weight: bold;
@@ -235,7 +246,7 @@ hr {
 
 /* TESTIMONIALS  */
 .testimonials {
-  margin: 200px auto 0;
+  margin: 120px auto 0;
   width: 100%;
   position: relative;
   display: grid;
@@ -249,10 +260,6 @@ hr {
   width: 820px;
   height: 320px;
   margin: 0 auto 20px;
-  /* position: absolute;
-  left: 50%;
-  transform: translateX(300%);
-  transition: .4s ease-out transform; */
   color: #fff;
   font-size: 16px;
   font-weight: 100;
@@ -260,15 +267,7 @@ hr {
   
   overflow: hidden;
 }
-/* .testimonial.slide-out-left {
-    transform: translateX(-300%);
-}
-.testimonial.slide-out-right {
-    transform: translateX(300%);
-} */
-/* .testimonial.active {
-    transform: translateX(-50%);
-} */
+
 .testimonial-heading {
     font-size: 30px;
 line-height: 40px;
@@ -340,7 +339,7 @@ line-height: 30px;
 
 
 .article {
-  margin-top: 150px;
+  margin-top: 120px;
   text-align: center;
 }
 .article p:first-child {
@@ -398,7 +397,7 @@ line-height: 30px;
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
   width: 100%;
   height: 400px;
-  margin-top: 200px;
+  margin-top: 120px;
   color: white;
   position: relative;
 }
@@ -499,6 +498,11 @@ line-height: 30px;
 
 /* Responsiveness */
 @media (max-width: 1040px) and (min-width: 940px) {
+    .btn {
+        padding: 5px 0;
+    }
+}
+@media (max-width: 1040px) and (min-width: 940px) {
   .nav-links {
     font-size: 15px;
   }
@@ -561,7 +565,7 @@ line-height: 30px;
   .nav-links {
     display: none;
   }
-  .navbar button:last-child {
+  .hamburger {
     display: flex;
     background: none;
     outline: none;
@@ -581,14 +585,14 @@ line-height: 30px;
   }
   .providers img {
     display: block;
-    margin: 0 auto 5px;
+    margin: 0 auto 20px;
   }
   .download-app {
     flex-direction: column;
     flex-flow: column-reverse;
   }
   .download-app img:nth-child(2) {
-    margin: 0 auto 5px;
+    margin: 0 auto 20px;
    
   }
   .download-app div {
@@ -597,10 +601,16 @@ line-height: 30px;
 }
 @media (max-width: 939px) and (min-width: 738px) {
   .navbar {
-    padding: 50px 100px 20px;
+    padding: 50px 50px 20px;
   }
+  .close {
+    width: 26px;
+}
+ #menu {
+     margin-top: 10px;
+ }
   .header {
-    padding: 0 80px;
+    padding: 0 50px;
   }
   .header p:first-child {
     font-size: 38px;
@@ -614,7 +624,6 @@ line-height: 30px;
   }
   .header-img {
     width: 50%;
-    height: 350px;
   }
   .services .services-text p:first-child {
     font-size: 34px;
@@ -731,6 +740,9 @@ line-height: 30px;
   .navbar {
     padding: 30px 30px 20px;
   }
+  .close {
+    width: 25px;
+}
   .header {
     padding: 0 100px;
   }
@@ -855,6 +867,9 @@ line-height: 30px;
   }
 }
 @media (max-width: 536px) and (min-width: 0px) {
+    .footer .footer-links {
+        margin-top: 50px;
+    }
   .footer .footer-links div:nth-child(4) {
     margin-bottom: 0;
     padding-bottom: 5px;
@@ -866,13 +881,19 @@ line-height: 30px;
 
 @media (max-width: 536px) and (min-width: 336px) {
   .navbar {
-    padding: 30px 7px 20px;
+    padding: 30px 30px 20px;
+  }
+  .navbar .hamburger{
+      width: 25px;
+  }
+  .close {
+      width: 18px;
   }
   .header {
-    padding: 0 20px;
+    padding: 0 30px;
   }
   .header p:first-child {
-    font-size: 38px;
+    font-size: 30px;
   }
   .header p:nth-child(2) {
     font-size: 14px;
@@ -882,7 +903,7 @@ line-height: 30px;
     height: 35px;
   }
   .services .services-text p:first-child {
-    font-size: 34px;
+    font-size: 26px;
     line-height: 20px;
   }
   .services .services-text p:last-child {
@@ -891,7 +912,9 @@ line-height: 30px;
     margin: 24px auto 0;
   }
   .services .services-cards {
+      width: 87%;
     display: block;
+    margin: 80px 25px 0;
   }
   .services .services-cards div {
     padding: 40px 20px;
@@ -910,7 +933,8 @@ line-height: 30px;
   }
 
   .providers div p:first-child {
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 37px;
   }
   .providers div p:nth-child(3) {
     font-size: 13px;
@@ -924,7 +948,8 @@ line-height: 30px;
     padding: 0 20px;
   }
   .download-app div p:first-child {
-    font-size: 30px;
+    font-size: 26px;
+    line-height: 37px;
   }
   .download-app div p:nth-child(3) {
     font-size: 14px;
@@ -964,16 +989,17 @@ line-height: 30px;
     font-size: 13px;
 }
   .article p:first-child {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 26px;
+    line-height: 30px;
   }
   .articles {
     display: block;
+    width: auto;
   }
   .articles div {
-    margin: 0px auto 20px;
-    width: 270px;
-    height: 450px;
+    margin: 0px 20px 20px;
+    width: 334px;
+    height: 480px;
   }
   .articles div p:nth-child(2) {
     font-size: 15px;
@@ -989,6 +1015,7 @@ line-height: 30px;
   }
   .footer {
     height: auto;
+    padding-bottom: 30px;
   }
   .footer .footer-links {
     display: block;
@@ -1003,6 +1030,7 @@ line-height: 30px;
   .footer .logo span {
     font-size: 16px;
     margin-left: 8px;
+   margin-bottom: 15px;
   }
   .footer .footer-links div {
     margin-bottom: 20px;
@@ -1167,6 +1195,7 @@ line-height: 30px;
   .footer .logo span {
     font-size: 16px;
     margin-left: 8px;
+    margin-bottom: 15px;
   }
   .footer .footer-links div {
     margin-bottom: 20px;
