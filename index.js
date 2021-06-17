@@ -33,7 +33,8 @@ window.addEventListener("resize", () => {
 
 const moveSlide = (nextSlide) => {
   const slidePosition = nextSlide * slides[0].clientWidth;
-  slider.scrollTo(slidePosition, 0);
+  // slider.scrollTo(slidePosition, 0);
+  SmoothHorizontalScrolling(slider, 500, slidePosition - slider.scrollLeft, slider.scrollLeft)
   currentSlide = nextSlide;
 };
 
@@ -53,3 +54,18 @@ const showMenu = () => {
   }
 };
 
+
+function SmoothHorizontalScrolling(e, time, amount, start) {
+  var eAmt = amount / 100;
+  var curTime = 0;
+  var scrollCounter = 0;
+  while (curTime <= time) {
+      window.setTimeout(SHS_B, curTime, e, scrollCounter, eAmt, start);
+      curTime += time / 100;
+      scrollCounter++;
+  }
+}
+
+function SHS_B(e, sc, eAmt, start) {
+  e.scrollLeft = (eAmt * sc) + start;
+}
